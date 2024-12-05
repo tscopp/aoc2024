@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-import AOC
+from util import AOC
 
 
 class Day1:
     def __init__(self) -> None:
         aoc = AOC.AOC()
-        dataset1, dataset2 = self.parse_input(aoc.read_input('day1.txt'))
+        dataset1, dataset2 = self.parse_input(aoc.read_input('input/day1.txt'))
         print(f"Part One: {self.part1(dataset1, dataset2)}")
         print(f"Part Two: {self.part2(self.determine_similarity_score(dataset1, dataset2), dataset1)}")
 
