@@ -5,19 +5,12 @@ class TestDay2(unittest.TestCase):
     def setUp(self):
         self.day2 = Day2()
 
-    def test_validate_direction(self):
-        self.assertTrue(self.day2.validate_direction([1, 2, 3, 4]))
-        self.assertTrue(self.day2.validate_direction([4, 3, 2, 1]))
-        self.assertFalse(self.day2.validate_direction([1, 3, 2, 4]))
-        self.assertFalse(self.day2.validate_direction([4, 1, 3, 2]))
-
-    def test_validate_delta(self):
-        self.assertTrue(self.day2.validate_delta([1, 2, 3]))
-        self.assertTrue(self.day2.validate_delta([3, 2, 1]))
-        self.assertFalse(self.day2.validate_delta([1, 5, 3]))
-        self.assertFalse(self.day2.validate_delta([1, 1, 3]))
-        self.assertFalse(self.day2.validate_delta([1, 1, 9]))
-        self.assertFalse(self.day2.validate_delta([3, 1, 5]))
+    def test_validate_levels(self):
+        self.assertTrue(self.day2.validate_levels([1, 2, 3]))
+        self.assertTrue(self.day2.validate_levels([3, 2, 1]))
+        self.assertTrue(self.day2.validate_levels([1, 4, 7]))
+        self.assertFalse(self.day2.validate_levels([3, 1, 4]))
+        self.assertFalse(self.day2.validate_levels([2, 3, 4, 3, 2]))
 
 if __name__ == "__main__":
     unittest.main()
